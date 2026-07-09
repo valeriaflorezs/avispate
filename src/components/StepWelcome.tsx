@@ -1,11 +1,12 @@
 import { StepShell } from "./StepShell";
 import { MascotVideo } from "./MascotVideo";
+import { asset } from "../lib/assets";
 
 export function StepWelcome({ onNext }: { onNext: () => void }) {
   return (
     <StepShell eyebrow="Avíspate" title="Bienvenidos al Carnaval de las raíces">
       <img
-        src="/assets/img/logo.webp"
+        src={asset("/assets/img/logo.webp")}
         alt="Avíspate"
         data-reveal
         style={{ width: "min(220px, 55vw)" }}
@@ -15,7 +16,7 @@ export function StepWelcome({ onNext }: { onNext: () => void }) {
         Barranquilla. Dale play a nuestra mascota para comenzar la aventura.
       </p>
       <div data-reveal>
-        <MascotVideo label="Reproducir bienvenida" src="/assets/video/bienvenida.mp4" />
+        <MascotVideo label="Reproducir bienvenida" src={asset("/assets/video/bienvenida.mp4")} />
       </div>
       <button className="btn" data-reveal onClick={onNext}>
         Comenzar el viaje →

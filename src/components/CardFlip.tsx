@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import type { CardData } from "../data/cards";
+import { asset } from "../lib/assets";
 import "./CardFlip.css";
 
 export function CardFlip({
@@ -29,12 +30,12 @@ export function CardFlip({
     <div className="card-flip-wrap">
       <div className={"card-flip" + (flipped ? " is-flipped" : "")}>
         <div className="card-face card-face--back">
-          <img src="/assets/img/card-back.webp" alt="" />
+          <img src={asset("/assets/img/card-back.webp")} alt="" />
         </div>
 
         <div className="card-face card-face--front">
           <div className="card-front-art">
-            <img src={`/assets/cards/${card.id}.webp`} alt={card.title} />
+            <img src={asset(`/assets/cards/${card.id}.webp`)} alt={card.title} />
           </div>
           <div className="card-front-panel">
             <p className="card-front-title">{card.title}</p>

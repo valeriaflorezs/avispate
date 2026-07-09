@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import { animate } from "animejs";
+import { asset } from "../lib/assets";
 import "./BoxOpening.css";
 
 export function BoxOpening({ onOpened }: { onOpened: () => void }) {
@@ -46,10 +47,10 @@ export function BoxOpening({ onOpened }: { onOpened: () => void }) {
         <div className="box-glow" ref={glowRef} />
         <div className="box-3d" ref={boxRef}>
           <div className="box-lid" ref={lidRef}>
-            <img src="/assets/img/logo.webp" alt="" />
+            <img src={asset("/assets/img/logo.webp")} alt="" />
           </div>
           <div className="box-base">
-            <img src="/assets/img/avispa-3d.webp" alt="" className="box-bee" />
+            <img src={asset("/assets/img/avispa-3d.webp")} alt="" className="box-bee" />
           </div>
         </div>
       </button>

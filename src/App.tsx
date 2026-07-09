@@ -7,6 +7,7 @@ import { StepExplicacion } from "./components/StepExplicacion";
 import { StepJuego } from "./components/StepJuego";
 import { StepGracias } from "./components/StepGracias";
 import { STEP_ORDER, type StepId } from "./steps";
+import { asset } from "./lib/assets";
 import "./App.css";
 
 function App() {
@@ -27,7 +28,10 @@ function App() {
 
   return (
     <div className="app-shell">
-      <div className="pattern-bg" />
+      <div
+        className="pattern-bg"
+        style={{ backgroundImage: `url(${asset("/assets/img/patron.webp")})` }}
+      />
       <ProgressBar current={step} />
       <main className="app-main" key={step}>
         {step === "welcome" && <StepWelcome onNext={goNext} />}

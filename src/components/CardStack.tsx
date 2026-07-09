@@ -1,4 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
+import { asset } from "../lib/assets";
 import "./CardStack.css";
 
 export function CardStack({
@@ -41,7 +42,7 @@ export function CardStack({
                 transition={{ type: "spring", stiffness: 220, damping: 22 }}
                 style={{ zIndex: 10 - depth }}
               >
-                <img src="/assets/img/card-back.webp" alt="" draggable={false} />
+                <img src={asset("/assets/img/card-back.webp")} alt="" draggable={false} />
               </motion.div>
             );
           })}

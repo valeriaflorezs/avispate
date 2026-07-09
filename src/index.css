@@ -103,7 +103,8 @@ a {
 .pattern-bg {
   position: fixed;
   inset: 0;
-  background: url("/assets/img/patron.webp") center/cover;
+  background-position: center;
+  background-size: cover;
   opacity: 0.14;
   z-index: 0;
   pointer-events: none;
