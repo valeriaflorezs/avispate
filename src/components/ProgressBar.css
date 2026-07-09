@@ -1,0 +1,66 @@
+.progress-bar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  gap: clamp(0.4rem, 2vw, 1.4rem);
+  padding: 0.75rem 1rem;
+  background: rgba(7, 26, 48, 0.82);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(232, 168, 56, 0.25);
+}
+
+.progress-dot {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  opacity: 0.45;
+  transition: opacity 0.3s ease;
+}
+
+.progress-dot.is-active,
+.progress-dot.is-done {
+  opacity: 1;
+}
+
+.progress-dot-mark {
+  width: 1.6rem;
+  height: 1.6rem;
+  min-width: 1.6rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+  background: rgba(251, 241, 221, 0.12);
+  border: 1.5px solid rgba(251, 241, 221, 0.35);
+  color: var(--cream);
+}
+
+.progress-dot.is-active .progress-dot-mark {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--navy-deep);
+  box-shadow: 0 0 0 4px rgba(232, 168, 56, 0.25);
+}
+
+.progress-dot.is-done .progress-dot-mark {
+  background: var(--green);
+  border-color: var(--green);
+  color: var(--cream);
+}
+
+.progress-dot-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  white-space: nowrap;
+  display: none;
+}
+
+@media (min-width: 720px) {
+  .progress-dot-label {
+    display: inline;
+  }
+}

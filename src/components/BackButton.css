@@ -1,0 +1,19 @@
+.back-button {
+  appearance: none;
+  border: 1.5px solid rgba(251, 241, 221, 0.35);
+  background: rgba(7, 26, 48, 0.4);
+  color: var(--cream);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  border-radius: 999px;
+  padding: 0.45rem 1rem;
+  align-self: flex-start;
+  transition: border-color 0.18s ease, color 0.18s ease, transform 0.18s ease;
+}
+
+.back-button:hover {
+  border-color: var(--gold);
+  color: var(--gold-light);
+  transform: translateX(-2px);
+}

@@ -1,0 +1,36 @@
+.rules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  width: 100%;
+}
+
+.rule-card {
+  background: rgba(251, 241, 221, 0.07);
+  border: 1px solid rgba(232, 168, 56, 0.3);
+  border-radius: 18px;
+  padding: 1.4rem 1.2rem 1.2rem;
+  text-align: left;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.rule-num {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: var(--navy-deep);
+  background: var(--gold);
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.rule-card p {
+  line-height: 1.5;
+  font-size: 0.98rem;
+}
